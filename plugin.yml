@@ -1,0 +1,18 @@
+main: fr.plx0wn.VoteTheLaw
+name: VoteThisLaw
+version: 1.0
+author: Plx0wn
+
+commands:
+   vote:
+      default: op
+      
+permissions:
+   vote.start:
+      default: op
+   vote.stop:
+      default: op
+   vote.vote:
+      default: op
+   vote.reload:
+      default: op
