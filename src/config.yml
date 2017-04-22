@@ -1,36 +1,13 @@
-messages:
-   # Lorsque le vote à commencé.
-   start: "&aUn vote a été lançé"
-   
-   # Lorsque le vote est fini.
-   stop: "&aFin du vote."
-   
-   # Résultats du vote. [yes] et [no] sont le nombre de voie pour ou de voie contre.
-   results: "&a[yes] pour, et [no] contre."
-   
-   # Lorsqu'un vote est déjà en cours.
-   already-start: "&cUn vote est déjà en cours."
-   
-   # Lorsqu'il y n'y a pas de vote en cours.
-   no-vote: "&cIl n'y a pas de vote en cours."
-   
-   # Lorsqu'un joueurs n'a pas les permissions.
-   no-perms: "&cVous n'avez pas les permissions."
-   
-   # Lorsqu'un joueurs vote pour.
-   vote-yes: "&aVotre vote a bien été enregistré. Vous avez voté pour."
-   
-   # Lorsqu'un joueurs vote contre.
-   vote-no: "&aVotre vote a bien été enregistré. Vous avez voté contre."
-   
-   # Lorsqu'un joueurs veut revoter.
-   already-vote: "&cVous avez déjà voté."
-   
-   # Lorsque la loi a été accepté.
-   law-accepted: "&aLa loi a été adopté par l'Assemblé."
-   
-   # Lorsque la loi a été refusé.
-   law-refused: "&cLa loi a été rejeté par l'Assemblé."
-   
-   # Lorsqu'il y a égalité.
-   law-equality: "&6Les voies sont à égalité."
+# DANS LA VERSION PROCHAINE
+buttons:
+   # Si vous modifiez des valeurs, il faudra refaire spawner les bouttons.
+   start:
+      name: "&aDébuter le vote."
+      block: HARD_CLAY
+      # Si il n'y a pas d'id, mettre zero.
+      id: 5
+   stop:
+      name: "&cTerminer le vote."
+      block: HARD_CLAY
+      # Si il n'y a pas d'id, mettre zero.
+      id: 14
