@@ -39,7 +39,7 @@ public class VoteTheLaw extends JavaPlugin {
 		saveDefaultConfig();
 		createFiles();
 	}
-	
+
 	private void createFiles() {
 
 		msgfile = new File(getDataFolder(), "messages.yml");
@@ -118,11 +118,9 @@ public class VoteTheLaw extends JavaPlugin {
 								Bukkit.getServer().broadcastMessage(cs(msgconf.getString("messages.law-accepted")));
 							} else {
 								if (yes == no) {
-									Bukkit.getServer()
-											.broadcastMessage(cs(msgconf.getString("messages.law-equality")));
+									Bukkit.getServer().broadcastMessage(cs(msgconf.getString("messages.law-equality")));
 								} else {
-									Bukkit.getServer()
-											.broadcastMessage(cs(msgconf.getString("messages.law-refused")));
+									Bukkit.getServer().broadcastMessage(cs(msgconf.getString("messages.law-refused")));
 								}
 
 							}
@@ -193,56 +191,54 @@ public class VoteTheLaw extends JavaPlugin {
 							player.sendMessage(cs(msgconf.getString("messages.no-perms")));
 						}
 					}
-					
+
 					// SETUP (mise en place des buttons personnalisé.
-					
-					if(args[0].equalsIgnoreCase("setup")){
-						
+
+					if (args[0].equalsIgnoreCase("setup")) {
+
 					}
 				}
-				
-				
+
 			}
-			
-			
+
 			if (args.length >= 2) {
-				
-				
-				if(sender instanceof Player){
+
+				if (sender instanceof Player) {
 					// SETUP (mise en place des buttons personnalisé.
-					Player player = ((Player)sender).getPlayer();
-					
-					if(args.length == 2){
-						if(args[0].equalsIgnoreCase("setup")){
-							if(args[1].equalsIgnoreCase("start")){
-								//Button.spawnVoteStartButton(player);
+					Player player = ((Player) sender).getPlayer();
+
+					if (args.length == 2) {
+						if (args[0].equalsIgnoreCase("setup")) {
+							if (args[1].equalsIgnoreCase("start")) {
+								// Button.spawnVoteStartButton(player);
 								player.sendMessage(ChatColor.RED + "Dans la prochaine version.");
 							}
-							if(args[1].equalsIgnoreCase("stop")){
-								//Button.spawnVoteStopButton(player);
+							if (args[1].equalsIgnoreCase("stop")) {
+								// Button.spawnVoteStopButton(player);
 								player.sendMessage(ChatColor.RED + "Dans la prochaine version.");
 							}
 						}
 					}
 				}
-				
+
 				// VOTE START WITH SENTENCE
-				
-				if(args[0].equalsIgnoreCase("start")){
+
+				if (args[0].equalsIgnoreCase("start")) {
 					String s = "";
 					for (int i = 1; i < args.length; i++) {
 						String arg = args[i] + " ";
 						s = s + arg;
 					}
-					
+
 					Bukkit.getServer().broadcastMessage("");
 					Bukkit.getServer().broadcastMessage(cs(msgconf.getString("messages.start")));
 					Bukkit.getServer().broadcastMessage(cs("&a" + s));
 					Bukkit.getServer().broadcastMessage("");
 				}
-				
+
 			}
-		}return false;
-}
+		}
+		return false;
+	}
 
 }
